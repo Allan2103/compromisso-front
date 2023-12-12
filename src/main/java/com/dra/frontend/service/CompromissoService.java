@@ -15,10 +15,11 @@ public class CompromissoService {
 	public List<Compromisso> getCompromissos(){
 		
 		ArrayList<Compromisso> listaCompromissos = new ArrayList<>();
-
+		
 
         for (int i=0;i<20;i++) {
-        	listaCompromissos.add(new Compromisso("Reunião " + Integer.toString(i+1), "2023-01-01", "Sala de Conferência", "Pendente"));
+        	Long id = (long) i;
+        	listaCompromissos.add(new Compromisso(id, "Reunião " + Integer.toString(i+1), "2023-01-01", "Sala de Conferência", "Pendente"));
         }
 		
         return new ArrayList<Compromisso>(listaCompromissos);

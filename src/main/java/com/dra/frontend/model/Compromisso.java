@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Compromisso {
+	private long id;
+	
 	private String nome;
     private String data;
     private String local;
@@ -16,13 +18,22 @@ public class Compromisso {
     public Compromisso() {
     }
 
-    public Compromisso(String nome, String data, String local, String status) {
+    public Compromisso(Long id, String nome, String data, String local, String status) {
+    	this.id = id;
         this.nome = nome;
         this.data = data;
         this.local = local;
         this.status = status;
     }
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+    
     public String getNome() {
         return nome;
     }
